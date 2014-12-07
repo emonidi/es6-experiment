@@ -1,0 +1,19 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&subset=latin,cyrillic-ext);
+@import "navbar";
+@import "searchbar";
+@import "bookholder";
+body{
+  padding-top:52px;
+  font-family: "Roboto",sans-serif;
+  font-size: 16px;
+}
+
+.list-group-item{
+  margin-bottom: 20px;
+}
+

@@ -1,0 +1,50 @@
+.searchbar{
+	background: #eef1f7;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	margin:0;
+
+	@media screen and (max-width: $screen-md){
+		transform:translate3d(0,-140px,0);
+		transition:.3s;
+
+		&.collapsed{
+			transform:translate3d(0,0,0);
+		}
+
+	}
+
+
+
+	.title{
+		height: 70px;
+		border-bottom: solid 1px #dadfea;
+		h3{
+			margin:0;
+			padding: 0;
+			line-height: 70px;
+			font-family: "Roboto condensed";
+			font-size: 22px;
+			color:#444c63;
+		}
+
+		search-box{
+			margin-top:15px;
+			display: block;
+
+		}
+	}
+
+	.menu{
+		border-top:solid 1px #fff;
+		line-height: 49px;
+		height: 49px;
+		border-bottom: solid 1px #dadfea;
+	}
+
+	.search{
+		border-top:solid 1px #fff;
+		border-bottom: solid 1px #dadfea;
+	}
+}

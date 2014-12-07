@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/scripts/model.js"],"names":[],"mappings":";;IAAM,KAAK,GACC,SADN,KAAK,GACG,EAEZ","file":"app/scripts/model.js","sourcesContent":["class Model{\r\n\tconstructor(){\r\n\r\n\t}\t\r\n}"]}
