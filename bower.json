@@ -4,10 +4,11 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
     "modernizr": "~2.8.2",
-    "require":"*"
+    "require": "*"
   },
   "devDependencies": {
     "common.js": "~0.4.0",
-    "require": "*"
+    "require": "*",
+    "firebase": "~2.0.6"
   }
 }

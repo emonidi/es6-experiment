@@ -23,7 +23,7 @@ var SearchBox = (function () {
   SearchBox.prototype.setSearchIcon = function () {
     var _this2 = this;
     console.log(this.searchBar);
-    this.searchIcon.addEventListener("touchend", function (e) {
+    this.searchIcon.addEventListener("click", function (e) {
       e.preventDefault();
       _this2.toggleSearchBar();
     });

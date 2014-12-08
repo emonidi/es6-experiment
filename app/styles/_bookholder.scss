@@ -30,12 +30,23 @@
   	}
   }
 
-  .thumb img{
+  .thumb .book-image{
   	height: 320px;
   	box-shadow: 1px 1px 5px;
   	//width:200px;
   	max-width: 80%;
   	border-radius: 10px;
+  }
+
+  .thumb .like{
+      float: right;
+      a{
+        color:#444c63;
+      }
+  }
+
+  .thumb .heart{
+    position:absolute;
   }
 
   .thumb img.book-icon{

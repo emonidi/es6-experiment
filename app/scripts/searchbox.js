@@ -18,7 +18,7 @@ export default class SearchBox{
 
 	setSearchIcon(){
 		console.log(this.searchBar);
-		this.searchIcon.addEventListener('touchend',(e)=>{
+		this.searchIcon.addEventListener('click',(e)=>{
 			e.preventDefault();
 			this.toggleSearchBar();
 		});
