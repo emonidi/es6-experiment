@@ -1,6 +1,9 @@
 "use strict";
 
 var LazyImageLoader = require('/lazyimageloader')["default"];
+var FirebaseData = require('/firebase')["default"];
+var firebase = new FirebaseData();
+
 var BookHolder = (function () {
   var BookHolder = function BookHolder() {
     this.el = document.querySelector("#book-holder");

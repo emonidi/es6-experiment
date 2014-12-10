@@ -1,6 +1,8 @@
 export default class Ajax {
-	constructor(){
+	constructor(responseType){
 		this.xhr = new XMLHttpRequest();
+		this.xhr.responseType = responseType ? responseType : "text";
+
 	}
 
 	send(){
@@ -14,11 +16,16 @@ export default class Ajax {
 	}
 
 	processResponse(success,error){
+		var self = this;
 		this.xhr.onreadystatechange = function(e){
+			if(self.responseType === 'text'){
+				this.response = JSON.parse(this.response);
+			}
+			console.log(self.xhr.responseType);
 			if(this.readyState === 4 && this.status === 200){
-				success(JSON.parse(this.response));
+				success(this.response);
 			}else if(this.readyState === 4 && this.status !== 200){
-				error && error(JSON.parse(this.response));
+				error && error(this.response);
 			}
 		}
 	}

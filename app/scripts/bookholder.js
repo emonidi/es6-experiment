@@ -1,4 +1,7 @@
 import LazyImageLoader from '/lazyimageloader';
+import FirebaseData from '/firebase';
+let firebase = new FirebaseData();
+		
 export default class BookHolder{
 	constructor(){
 		this.el = document.querySelector('#book-holder');

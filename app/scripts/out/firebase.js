@@ -29,19 +29,20 @@ var FirebaseData = (function () {
     });
   };
 
-  FirebaseData.prototype.getAllBooks = function (callback) {
+  FirebaseData.prototype.getAllBooks = function (cb) {
     this.db.once("value", function (snapshot) {
-      callback(snapshot.val());
+      cb(snapshot.val());
     });
   };
 
-  FirebaseData.prototype.getLikedBooks = function (callback) {
-    var arr = [];
+  FirebaseData.prototype.getLikedBooks = function (cb) {
+    var booksarr = [];
     this.getAllBooks(function (data) {
-      for (var i in data) {
-        data[i].isbn !== undefined && arr.push(data[i].isbn);
-      }
-      callback(arr);
+      console.log(data);
+      // for(var i = 0; i < data.length; i++){
+      // 	data[i].isbn !== undefined && arr.push(data[i].isbn);
+      // }
+      cb(booksarr);
     });
   };
 

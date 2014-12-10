@@ -27,19 +27,20 @@ export default class FirebaseData{
 		});
 	}
 
-	getAllBooks(callback){
+	getAllBooks(cb){
 		this.db.once('value',(snapshot) => {
-			callback(snapshot.val());
+			cb(snapshot.val());
 		})
 	}
 
-	getLikedBooks(callback){
-		var arr = [];
+	getLikedBooks(cb){
+		var booksarr = [];
 		this.getAllBooks((data)=>{
-			for(let i in data){
-				data[i].isbn !== undefined && arr.push(data[i].isbn);
-			}
-			callback(arr);
+			console.log(data);
+			// for(var i = 0; i < data.length; i++){
+			// 	data[i].isbn !== undefined && arr.push(data[i].isbn);
+			// }
+			cb(booksarr);
 		});
 	}
 } 
